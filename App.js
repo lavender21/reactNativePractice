@@ -8,35 +8,21 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
+  View
 } from 'react-native';
 
 import {
-  Header,
   Colors
 } from 'react-native/Libraries/NewAppScreen';
+import MainContent from "./app/index";
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Layout demo</Text>
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <View style={{flex: 1}}>
+        <MainContent />
+      </View>
     </>
   );
 };
