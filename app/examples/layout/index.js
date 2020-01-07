@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Button, StyleSheet, Text } from "react-native";
 import RowLayout from "./RowLayout"
+import ColLayout from './ColLayout';
 
 const styles = StyleSheet.create({
     title: {
@@ -20,7 +21,7 @@ export class LayoutScreen extends Component {
     }
     list = [
         {key: "row", label: "行布局", component: <RowLayout />},
-        {key: "col", label: "列布局", component: <View><Text>ssss</Text></View> },
+        {key: "col", label: "列布局", component: <ColLayout /> },
         {key: "others", label: "其他", component: <View></View>}
     ]
     render() {
